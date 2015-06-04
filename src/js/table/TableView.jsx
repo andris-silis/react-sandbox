@@ -15,15 +15,30 @@ export default React.createClass({
     });
   },
 
+  componentDidMount() {
+    this.deferredReRender();
+  },
+
+  deferredReRender() {
+    _.defer(this.randomizeData);
+  },
+
   onNewDataClick() {
+    this.randomizeData();
+  },
+
+  randomizeData() {
     var tableData = this.state.tableData.map(row => {
       row[0] = Math.random();
       return row;
     });
 
-    this.setState({
-      tableData: tableData
-    });
+    this.setState(
+      {
+        tableData: tableData
+      },
+      this.deferredReRender
+    );
   },
 
   renderCellEl(content, index) {
