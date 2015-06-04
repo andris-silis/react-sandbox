@@ -1,0 +1,50 @@
+{
+  "name": "tree",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "postinstall": "rm -rf node_modules/gulp/node_modules/vinyl-fs/node_modules/glob-watcher/node_modules/gaze/node_modules/globule/node_modules/lodash ; ",
+    "build": "./node_modules/.bin/gulp build",
+    "build-prod": "./node_modules/.bin/gulp build-prod",
+    "watch": "./node_modules/.bin/gulp watch",
+    "test": "./node_modules/karma/bin/karma start --single-run"
+  },
+  "author": "Andris Silis",
+  "license": "",
+  "devDependencies": {
+    "babel-core": "^4.0.2",
+    "babel-loader": "^4.0.0",
+    "gulp": "^3.8.8",
+    "gulp-buffer": "0.0.2",
+    "gulp-declare": "^0.3.0",
+    "gulp-filter": "^1.0.2",
+    "gulp-if": "^1.2.5",
+    "gulp-livereload": "^2.1.1",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-plumber": "^0.6.5",
+    "gulp-preprocess": "^1.1.1",
+    "gulp-react": "^2.0.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-rev": "^2.0.1",
+    "gulp-rev-collector": "^0.1.2",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-sym": "0.0.14",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "gulp-webpack": "^1.1.0",
+    "gulp-wrap": "^0.3.0",
+    "imports-loader": "^0.6.3",
+    "jsx-loader": "^0.12.2",
+    "null-loader": "^0.1.0",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "babel": "^4.7.3",
+    "lodash": "^3.5.0",
+    "react": "^0.13.3",
+    "react-tools": "^0.13.0"
+  }
+}
