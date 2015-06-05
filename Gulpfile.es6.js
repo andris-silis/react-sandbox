@@ -32,13 +32,7 @@ gulp.task(
     'build-js'
   ],
   () => {
-    if (process.env.NODE_ENV === 'production' && !process.env.NO_MINIFY) {
-      gulp.start('minify-public', function () {
-        return gutil.log('Build done');
-      });
-    } else {
-      return gutil.log('Build done');
-    }
+    return gutil.log('Build done');
   }
 );
 
