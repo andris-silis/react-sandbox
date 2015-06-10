@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'underscore';
+import TableCellView from './TableCellView.jsx';
 
 export default React.createClass({
   getInitialState() {
@@ -43,7 +44,7 @@ export default React.createClass({
 
   renderCellEl(content, index) {
     return (
-      <td key={index}>{content}</td>
+      <TableCellView key={index} content={content} />
     );
   },
 
