@@ -17,11 +17,7 @@ export default React.createClass({
   },
 
   componentDidMount() {
-    this.deferredReRender();
-  },
-
-  deferredReRender() {
-    _.defer(this.randomizeData);
+    this.randomizeData();
   },
 
   onNewDataClick() {
@@ -38,7 +34,7 @@ export default React.createClass({
       {
         tableData: tableData
       },
-      this.deferredReRender
+      () => _.defer(() => requestAnimationFrame(this.randomizeData))
     );
   },
 
